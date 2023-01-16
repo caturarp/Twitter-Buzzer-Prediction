@@ -13,10 +13,10 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 sid = SentimentIntensityAnalyzer()
 
 # define credentials
-consumer_key = "2CW39gBbl8RaL6ED9lUGUL3Kt"
-consumer_secret = "TiaGBqh9qUqL3Dx1bV9abI3jfMeuXfXa7Ko0xKWoioOn0DhOPm"
-access_token = "1520536260300787712-Rtwy55jn2E7HvQCqKqywDlF20QMXfg"
-access_token_secret = "kK8p1RFbH3WnYo1eFuTCIdIggypIrQrIIj2PXaVTaBW18"
+consumer_key = ""
+consumer_secret = ""
+access_token = ""
+access_token_secret = ""
 
 # create instance twitter with credentials
 api = twitter.Api(consumer_key= "2CW39gBbl8RaL6ED9lUGUL3Kt",
