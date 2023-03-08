@@ -13,7 +13,7 @@ pip install -r requirements.txt
 ## Usage
 1. Run the application using the following command:
 ```bash
-flask run
+flask --app server run
 ```
 2. Open a web browser and navigate to http://localhost:5000/ to access the application.
 3. Enter the text of the tweet you want to predict in the text box and click on the "Predict" button.
