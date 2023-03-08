@@ -13,10 +13,10 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 sid = SentimentIntensityAnalyzer()
 
 # define credentials
-consumer_key = ""
-consumer_secret = ""
-access_token = ""
-access_token_secret = ""
+consumer_key = "2CW39gBbl8RaL6ED9lUGUL3Kt"
+consumer_secret = "TiaGBqh9qUqL3Dx1bV9abI3jfMeuXfXa7Ko0xKWoioOn0DhOPm"
+access_token = "1520536260300787712-Rtwy55jn2E7HvQCqKqywDlF20QMXfg"
+access_token_secret = "kK8p1RFbH3WnYo1eFuTCIdIggypIrQrIIj2PXaVTaBW18"
 
 # create instance twitter with credentials
 api = twitter.Api(consumer_key= "2CW39gBbl8RaL6ED9lUGUL3Kt",
@@ -32,7 +32,7 @@ def scrape_tweets(username):
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
     api = tweepy.API(auth)
-    tweets = tweepy.Cursor(api.search_tweets,q='from:'+username, tweet_mode='extended').items(10)
+    tweets = tweepy.Cursor(api.search,q='from:'+username, tweet_mode='extended').items(10)
     for tweet in tweets:
         try:
             content = re.sub(r'[^\x00-\x7f]', r'', tweet.full_text) # remove non-ascii characters (emoji)
